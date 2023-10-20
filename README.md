@@ -1,0 +1,2 @@
+# HabuVendingMachine
+自動販売機のシミュレータを作ります
