@@ -1,0 +1,61 @@
+* {
+    /* background-color: rgb(36, 36, 36);
+    color: rgb(240, 240, 240); */
+    margin: 5px;
+}
+
+h1 {
+    font-size: 1.5rem;
+}
+
+#beverageContainer {
+    border: 2px solid white;
+    margin: 0 auto;
+    padding: 10px;
+}
+
+#logWindow {
+    margin: 5px;
+}
+
+.vendingMachine {
+    /* margin: 0 auto; */
+    border: 2px solid gray;
+    width: 250px;
+}
+
+table,
+td {
+    margin: 5px auto;
+    text-align: center;
+    border: 1px solid rgb(141, 141, 141);
+}
+
+thead,
+tfoot {
+    background-color: rgb(255, 72, 0);
+    color: #fff;
+}
+
+.goods .images td {
+    width: 60px;
+    height: 70px;
+}
+
+.goods td {
+    border: 2px solid pink;
+}
+
+.goods .prices td {
+    font-size: 0.9rem;
+    height: 10px;
+}
+
+.prices input,
+.status input {
+    text-align: center;
+}
+
+.status td {
+    border: 2px solid yellowgreen;
+}
