@@ -8,20 +8,22 @@ h1 {
     font-size: 1.5rem;
 }
 
-#beverageContainer {
-    border: 2px solid white;
-    margin: 0 auto;
-    padding: 10px;
+.myWallet {
+    margin-bottom: 10px;
+    border: 2px solid gray;
+    width: 220px;
 }
 
 #logWindow {
-    margin: 5px;
+    margin-top: 5px;
+    margin: auto;
+    height: 300px;
 }
 
 .vendingMachine {
     /* margin: 0 auto; */
     border: 2px solid gray;
-    width: 250px;
+    width: 220px;
 }
 
 table,
@@ -58,4 +60,11 @@ tfoot {
 
 .status td {
     border: 2px solid yellowgreen;
+}
+
+#rep01,
+#rep02,
+#rep03 {
+    width: 50px;
+    text-align: center;
 }
