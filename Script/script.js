@@ -6,6 +6,8 @@ class VendingMachine {
 // console.trace(); // スタックトレースを出力できる(呼び出し関係を把握しやすくする)
 // console.count(''); // コードの呼び出し回数をカウントする
 
+// 今後商品が増えることを見越して定数を減らす工夫を
+const priceInputs = document.querySelectorAll('.price');
 const wallet = document.getElementById('wallet');
 const price1 = document.getElementById('price01');
 const price2 = document.getElementById('price02');
@@ -16,14 +18,49 @@ const button3 = document.getElementById('button03');
 const status1 = document.getElementById('status01');
 const status2 = document.getElementById('status02');
 const status3 = document.getElementById('status03');
-const rep1 = document.getElementById('rep01');
-const rep2 = document.getElementById('rep02');
-const rep3 = document.getElementById('rep03');
+const stock1 = document.getElementById('stock01');
+const stock2 = document.getElementById('stock02');
+const stock3 = document.getElementById('stock03');
 const log = document.getElementById('log');
 
-wallet.value = "120";
+function moneyInWallet(max, min) {
+    const random = Math.floor(Math.random() * (max - min + 1)) + min;
+    wallet.value = random;
+}
+moneyInWallet(200,1500);
 
-price1.value = "test";
+// 飲み物の情報を格納するオブジェクト
+const prices = { //p.270
+    coke: 120,
+    orange: 140,
+    tea: 150,
+    //これらの数値を読み込んでpriceに表示させる
+};
+
+const stocks = {
+    coke: 20,
+    orange: 20,
+    tea: 10,
+    //これらの数値はstatusに表示させる
+};
+
+// 商品の在庫を管理する関数
+// 品切れ時には'SoldOut'を表示する
+// またボタンを暗くする
+
+// 購入ボタンを押すと商品の値段に応じて
+// walletの残量と在庫の残量が減る
+
+// 補充は(今は)個別にできるようにする
+// 在庫の量をデフォルトに戻す
+// 売上金を回収し、記録する
+
+// class="price"を処理する
+priceInputs.forEach((input,index) => {
+    // priceオブジェクトの情報を
+});
+
+price1.value = "price";
 status1.value = "Test";
 
 button1.addEventListener('click', () => {
@@ -36,7 +73,8 @@ button1.addEventListener('click', () => {
         } else {
             // disabled属性を設定
             button1.setAttribute("disabled", true);
-            button1.style.color = "White";
+            button1.style.backgroundColor = "rgb(90,90,90)";
+            button1.style.color = "rgb(255, 100, 100)";
         }
     // }
 });
