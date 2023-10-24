@@ -30,18 +30,10 @@ function moneyInWallet(max, min) {
 moneyInWallet(200,1500);
 
 // 飲み物の情報を格納するオブジェクト
-const prices = { //p.270
-    coke: 120,
-    orange: 140,
-    tea: 150,
-    //これらの数値を読み込んでpriceに表示させる
-};
-
-const stocks = {
-    coke: 20,
-    orange: 20,
-    tea: 10,
-    //これらの数値はstatusに表示させる
+const products = {
+    coke: { price: 120, stock: 20 },
+    orange: { price: 140, stock: 20 },
+    tea: { price: 150, stock: 10 }
 };
 
 // 商品の在庫を管理する関数
