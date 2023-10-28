@@ -19,7 +19,9 @@
                 </tr>
             </thead>
             <tbody>
-                <tr><td><input type="number" id="wallet" readonly>円</td></tr>
+                <tr>
+                    <td><input type="number" id="wallet" readonly>円</td>
+                </tr>
             </tbody>
         </table>
     </div>
@@ -33,57 +35,81 @@
             </thead>
             <tbody class="goods">
                 <tr class="images">
-                    <td class="coke">Coke</td>
-                    <td class="orange">Orange</td>
-                    <td class="tea">Tea</td>
+                    <td class="coke"
+                        data-product="coke">Coke</td>
+                    <td class="orange"
+                        data-product="orange">Orange</td>
+                    <td class="tea"
+                        data-product="tea">Tea</td>
                 </tr>
                 <tr class="prices">
                     <td><input type="text"
-                        class="price coke" id="price01"
-                        size="4" readonly></td>
+                                class="price"
+                                data-product="coke"
+                                size="4"
+                                readonly></td>
                     <td><input type="text"
-                        class="price orange" id="price02"
-                        size="4" readonly></td>
+                                class="price"
+                                data-product="orange"
+                                size="4"
+                                readonly></td>
                     <td><input type="text"
-                        class="price tea" id="price03"
-                        size="4" readonly></td>
+                                class="price"
+                                data-product="tea"
+                                size="4"
+                                readonly></td>
                 </tr>
                 <tr class="buttons">
                     <td><input type="button"
-                        class="buton coke" id="button01"
-                        value="◯" size="4"></td>
+                                class="button"
+                                data-product="coke"
+                                value="◯"
+                                size="4"></td>
                     <td><input type="button"
-                        class="button orange" id="button02"
-                        value="◯" size="4"></td>
+                                class="button"
+                                data-product="orange"
+                                value="◯"
+                                size="4"></td>
                     <td><input type="button"
-                        class="button tea" id="button03"
-                        value="◯" size="4"></td>
+                                class="button"
+                                data-product="tea"
+                                value="◯"
+                                size="4"></td>
                 </tr>
             </tbody>
-            <tbody class="statuses">
+            <tbody class="stocks">
                 <tr>
                     <td><input type="text"
-                        class="status coke" id="status01"
-                        size="4" readonly></td>
+                                class="stock"
+                                data-product="coke"
+                                size="4"
+                                readonly></td>
                     <td><input type="text"
-                        class="status orange" id="status02"
-                        size="4" readonly></td>
+                                class="stock"
+                                data-product="orange"
+                                size="4"
+                                readonly></td>
                     <td><input type="text"
-                        class="status tea" id="status03"
-                        size="4" readonly></td>
+                                class="stock"
+                                data-product="tea"
+                                size="4"
+                                readonly></td>
                 </tr>
             </tbody>
             <tbody class="controlPanel"><!-- 後に切り離す -->
                 <tr>
                     <td><input type="button"
-                        class="stock coke" id="stock01"
-                        value="補充"></td>
+                                class="refill"
+                                data-product="coke"
+                                value="補充"></td>
                     <td><input type="button"
-                        class="stock orange" id="stock02"
-                        value="補充"></td>
+                                class="refill"
+                                data-product="orange"
+                                value="補充"></td>
                     <td><input type="button"
-                        class="stock tea" id="stock03"
-                        value="補充"></td>
+                                class="refill"
+                                data-product="tea"
+                                value="補充"></td>
                 </tr>
             </tbody>
         </table>

@@ -7,6 +7,7 @@
     - [必要な画像素材](#必要な画像素材)
     - [何から手をつけるか](#何から手をつけるか)
     - [簡単な仕組みから](#簡単な仕組みから)
+    - [ある商品の特定の要素を指定する方法は？('cokeのprice')](#ある商品の特定の要素を指定する方法はcokeのprice)
   - [設計](#設計)
     - [a](#a)
 
@@ -133,6 +134,40 @@ stop
     - 自動販売機をリセットし、在庫を補充できる機能を実装します。
 
 これらの段階を進むことで、段階的に自動販売機のプログラムを構築し、混乱せずに品質を保ちながら進めることができます。途中でコードをテストし、動作確認を行うことをおすすめします。
+
+### ある商品の特定の要素を指定する方法は？('cokeのprice')
+特定の商品（例: "coke"）の価格要素を指定できるようにするには、HTMLで各商品の要素に一意の識別子（IDまたはデータ属性）を設定する方法が考えられます。以下は一つの方法です：
+
+```html
+<div class="vendingMachine">
+    <table>
+        <thead>
+            <tr>
+                <th colspan="6">自動販売機</th>
+            </tr>
+        </thead>
+        <tbody class="goods">
+            <!-- 商品情報をデータとして持つ -->
+            <tr class="product" data-product="coke">
+                <td class="image">Coke</td>
+                <td class="price"><input type="text" class="price" data-product="coke" size="4" readonly></td>
+                <td class="button"><input type="button" class="button" data-product="coke" value="◯" size="4"></td>
+                <td class="status"><input type="text" class="status" data-product="coke" size="4" readonly></td>
+                <td class="stock"><input type="button" class="stock" data-product="coke" value="補充"></td>
+            </tr>
+            <!-- 同様に他の商品情報を追加 -->
+        </tbody>
+    </table>
+</div>
+```
+
+この例では、各要素に `data-product` 属性を追加し、その属性に商品名（例: "coke"）を設定しています。これにより、特定の商品の要素にアクセスするために商品名を使用できます。たとえば、"coke" の価格要素にアクセスするためには次のようにできます：
+
+```javascript
+const cokePriceInput = document.querySelector('.price[data-product="coke"]');
+```
+
+このコードで、`data-product="coke"` という属性が付いた価格要素が取得されます。同様に、他の商品にアクセスするためにも `data-product` 属性を使用できます。この方法を使用すると、特定の商品の要素にスクリプトからアクセスしやすくなります。
 
 ## 設計
 1. 財布の中身はランダム
