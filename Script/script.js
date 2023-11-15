@@ -18,6 +18,11 @@ const cokeButtonInput =
 const cokeStockInput =
     document.querySelector('.stock[data-product="coke"]');
 
+priceInputs.forEach(price => (a), {
+    // if (price === "orange")
+});
+
+
 cokePriceInput.value = '2345';
 cokeButtonInput.value = 'a';
 cokeStockInput.value = "9023";
